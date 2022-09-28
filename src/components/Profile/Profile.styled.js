@@ -42,8 +42,12 @@ export const Item = styled.li`
   border: 1px solid #e4e9f0;
   padding: 20px;
   text-align: center;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  &:first-of-type {
+    border-bottom-left-radius: 8px;
+  }
+  &:last-of-type {
+    border-bottom-right-radius: 8px;
+  }
 `;
 export const Label = styled.span`
   display: inline-block;
@@ -51,5 +55,5 @@ export const Label = styled.span`
   line-height: 24px;
 `;
 export const Note = styled.span`
-    font-weight: 700;
+  font-weight: 700;
 `;
