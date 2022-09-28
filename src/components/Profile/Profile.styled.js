@@ -33,7 +33,7 @@ export const StatistikList = styled.ul`
   list-style: none;
   padding-left: 0;
   display: inline-flex;
-  background-color: #f3f6f9;
+  background-color: #ecf1f4;
   margin: 0;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;

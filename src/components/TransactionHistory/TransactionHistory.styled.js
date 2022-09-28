@@ -5,6 +5,7 @@ export const TransactionTable = styled.table`
   margin: auto;
   box-shadow: 3px 2px 5px 1px rgb(0 0 0 / 51%);
   border: none;
+  background-color: #ffffff;
 `;
 export const TransactionHeader = styled.thead`
   height: 60px;
@@ -31,7 +32,7 @@ export const TransactionBody = styled.tbody`
 export const TransactionCell = styled.td`
   padding: 20px 0;
   border: none;
-  color: #868B8B;
+  color: #868b8b;
   &:first-child {
     text-transform: capitalize;
   }
