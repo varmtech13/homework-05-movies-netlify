@@ -17,6 +17,7 @@ export const Item = styled.li`
   margin-bottom: 12px;
   align-items: center;
   padding: 8px 12px;
+  background-color: #ffffff;
 `;
 export const Name = styled.span`
   font-size: 24px;
