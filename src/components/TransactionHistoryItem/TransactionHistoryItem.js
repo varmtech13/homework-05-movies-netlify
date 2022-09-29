@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import {
   TransactionRow,
   TransactionCell,
-} from 'components/TransactionHistory/TransactionHistory.styled';
+} from 'components/TransactionHistoryItem/TransactionHistoryItem.styled';
 export const TransactionHistoryItem = ({
   transaction: { id, type, amount, currency },
 }) => {

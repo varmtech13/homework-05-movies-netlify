@@ -29,11 +29,3 @@ export const TransactionHead = styled.th`
 export const TransactionBody = styled.tbody`
   text-align: center;
 `;
-export const TransactionCell = styled.td`
-  padding: 20px 0;
-  border: none;
-  color: #868b8b;
-  &:first-child {
-    text-transform: capitalize;
-  }
-`;
