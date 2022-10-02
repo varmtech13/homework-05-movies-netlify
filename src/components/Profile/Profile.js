@@ -39,11 +39,9 @@ export const Profile = ({ username, avatar, tag, location, stats }) => {
   );
 };
 Profile.propTypes = {
-  profile: PropTypes.shape({
-    username: PropTypes.string.isRequired,
-    tag: PropTypes.string.isRequired,
-    location: PropTypes.string.isRequired,
-    avatar: PropTypes.string.isRequired,
-    stats: PropTypes.array.isRequired,
-  }),
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  stats: PropTypes.object.isRequired,
 };
