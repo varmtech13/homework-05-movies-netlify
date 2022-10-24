@@ -1,13 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { App } from 'components/App';
-import { ThemeProvider } from 'styled-components';
+import { StrictMode } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import { createRoot } from 'react-dom/client';
 import './index.css';
+import { App } from './components/App';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <ThemeProvider theme={{}}>
+const rootElement = document.getElementById('root');
+const root = createRoot(rootElement);
+
+root.render(
+  <StrictMode>
+    <BrowserRouter>
       <App />
-    </ThemeProvider>
-  </React.StrictMode>
+    </BrowserRouter>
+  </StrictMode>,
 );
