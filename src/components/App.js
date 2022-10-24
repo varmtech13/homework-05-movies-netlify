@@ -16,7 +16,7 @@ const MovieDetailsView = lazy(() =>
 export const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<SharedLayout />}>
+      <Route path="/homework-05-movies" element={<SharedLayout />}>
         <Route index element={<Home />} />
         <Route path="movies" element={<SearchMoviesView />} />
         <Route path="movies/:movieId/*" element={<MovieDetailsView />} />
