@@ -8,7 +8,7 @@ export default function Navigations() {
       <StyledNavLink to="/homework-05-movies" end>
         <FcHome size="25" /> <span>Home</span>
       </StyledNavLink>
-      <StyledNavLink to="/movies" end>
+      <StyledNavLink to="movies" end>
         <BiMoviePlay size="25" />
         <Search>Movie</Search>
       </StyledNavLink>
