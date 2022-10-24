@@ -27,7 +27,7 @@ export default function MovieList({
             const posterPath = makeImagePath(movie.poster_path, 'w185');
             return (
               <Item key={movie.id}>
-                <NavLink to={`/movies/${movie.id}`}>
+                <NavLink to={`movies/${movie.id}`}>
                   <ResponsiveImage
                     src={posterPath}
                     alt={movie.title}
