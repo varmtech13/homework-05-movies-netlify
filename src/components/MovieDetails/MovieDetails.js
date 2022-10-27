@@ -14,6 +14,8 @@ import {
 } from './MovieDetails.styled';
 import { makeImagePath } from '../../services/makeImagePath';
 import PropTypes from 'prop-types';
+import { useLocation } from 'react-router-dom';
+import { BackLink } from '../BackLink/BackLink';
 
 export default function MovieDetails({
   title,
@@ -25,30 +27,37 @@ export default function MovieDetails({
   overview,
 }) {
   const posterUrl = makeImagePath(poster_path);
+  const location = useLocation();
+  const backLinkHref = location.state?.from ?? '/';
   return (
-    <Article>
-      <TitleBlock>
-        <MovieTitle>{title}</MovieTitle>
+    <>
+      <div>
+        <BackLink to={backLinkHref}>Back to list</BackLink>
+      </div>
+      <Article>
+        <TitleBlock>
+          <MovieTitle>{title}</MovieTitle>
 
-        <Image src={posterUrl} alt={title} width="300" />
-      </TitleBlock>
-      <Description>
-        <Title>Genres: </Title>
-        <GenresList>
-          {genres &&
-            genres.map((genre, idx) => <li key={idx}>{genre.name}</li>)}
-        </GenresList>
-        <Title>Description:</Title>
-        <Overview>{overview}</Overview>
+          <Image src={posterUrl} alt={title} width="300" />
+        </TitleBlock>
+        <Description>
+          <Title>Genres: </Title>
+          <GenresList>
+            {genres &&
+              genres.map((genre, idx) => <li key={idx}>{genre.name}</li>)}
+          </GenresList>
+          <Title>Description:</Title>
+          <Overview>{overview}</Overview>
 
-        <VoteText>
-          tmbd: <Vote>{vote_average}</Vote>
-        </VoteText>
-        <Link href={homepage} target="_blank" rel="noreferrer">
-          <FcLink size={35} />
-        </Link>
-      </Description>
-    </Article>
+          <VoteText>
+            tmbd: <Vote>{vote_average}</Vote>
+          </VoteText>
+          <Link href={homepage} target="_blank" rel="noreferrer">
+            <FcLink size={35} />
+          </Link>
+        </Description>
+      </Article>
+    </>
   );
 }
 MovieDetails.propTypes = {

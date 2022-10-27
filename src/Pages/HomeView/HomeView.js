@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-import { fetchTrandingMovie } from '../services/tmdb-api';
-import MovieList from '../components/MovieList/MovieList';
-import usePages from '../components/Hooks/usePages';
-import useLoader from '../components/Hooks/useLoader';
+import { fetchTrandingMovie } from '../../services/tmdb-api';
+import MovieList from '../../components/MovieList/MovieList';
+import usePages from '../../Hooks/usePages';
+import useLoader from '../../Hooks/useLoader';
 import { Title, Wrapper } from './HomeView.styled';
 
 export default function HomeView() {

@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import Pagination from '@material-ui/lab/Pagination';
 import PropTypes from 'prop-types';
 import {
@@ -17,6 +17,7 @@ export default function MovieList({
   loading,
   currentPage,
 }) {
+  const location = useLocation();
   return (
     <>
       {loading ? (
@@ -27,7 +28,7 @@ export default function MovieList({
             const posterPath = makeImagePath(movie.poster_path, 'w185');
             return (
               <Item key={movie.id}>
-                <NavLink to={`movies/${movie.id}`}>
+                <NavLink to={`/movies/${movie.id}`} state={{ from: location }}>
                   <ResponsiveImage
                     src={posterPath}
                     alt={movie.title}

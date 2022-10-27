@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import { SharedLayout } from './Layouts/SharedLayout';
 
-const Home = lazy(() => import('../Pages/HomeView'));
+const Home = lazy(() => import('../Pages/HomeView/HomeView'));
 const SearchMoviesView = lazy(() =>
   import('../Pages/SearchMoviesView' /* webpackChunkName: "home-view" */)
 );
@@ -16,10 +16,10 @@ const MovieDetailsView = lazy(() =>
 export const App = () => {
   return (
     <Routes>
-      <Route path="/homework-05-movies" element={<SharedLayout />}>
+      <Route path="/" element={<SharedLayout />}>
         <Route index element={<Home />} />
-        <Route path="movies" element={<SearchMoviesView />} />
-        <Route path="movies/:movieId/*" element={<MovieDetailsView />} />
+        <Route path="/movies" element={<SearchMoviesView />} />
+        <Route path="/movies/:movieId/*" element={<MovieDetailsView />} />
       </Route>
     </Routes>
   );

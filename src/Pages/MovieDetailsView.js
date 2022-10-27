@@ -7,10 +7,10 @@ import MovieDetails from '../components/MovieDetails/MovieDetails';
 import { NavigationMovieDetail } from '../components/Navigations/NavigationMovieDetail';
 
 const Cast = lazy(() =>
-  import('../components/Cast/Cast' /* webpackChunkName: "cast" */),
+  import('../components/Cast/Cast' /* webpackChunkName: "cast" */)
 );
 const Reviews = lazy(() =>
-  import('../components/Reviews/Reviews' /* webpackChunkName: "reviews" */),
+  import('../components/Reviews/Reviews' /* webpackChunkName: "reviews" */)
 );
 
 export default function MovieDetailsView() {
@@ -26,7 +26,7 @@ export default function MovieDetailsView() {
     <>
       <MovieDetails {...movie} />
 
-      <NavigationMovieDetail />
+      <NavigationMovieDetail id={movieId} />
 
       <Suspense fallback={<TailSpin timeout={10000} color="#ff0000" />}>
         <Routes>
