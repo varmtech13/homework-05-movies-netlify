@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate, useLocation, useSearchParams } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 export default function usePages() {
   const [totalPage, setTotalPage] = useState(1);
